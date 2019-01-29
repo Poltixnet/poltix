@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <title>{{ site.title }} {% if page.title %}|{% endif %} {{ page.title }}</title>
+
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/css/uikit.min.css" />
+
+        <!-- UIkit JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit-icons.min.js"></script>
+
+        <link rel="stylesheet" href="/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:300,400,500,600" rel="stylesheet">
+
+  </head>
+  <body>
+    <header class="uk-width-1-1" uk-sticky>
+            <div class="uk-container uk-width-1-1 menugrid" uk-grid>
+                <div class="uk-width-1-3 uk-text-left"><a href="/"><img src="/assets/images/logo.png" alt="Poltix Logo"></a></div> 
+                <div class="uk-width-1-3 uk-text-center categories">{{ page.categories }} </div>
+                <div class="uk-width-1-3 uk-text-right menu">        
+                    <ul>
+                        <li><a href="#">Über Poltix</a></li>
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Datenschutz</a></li>
+                    </ul>
+                </div> 
+            </div>
+    </header>
+        <div class="uk-container main">
+                {{ content }}
+
+        </div>
+
+  </body>
+</html>
